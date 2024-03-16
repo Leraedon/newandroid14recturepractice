@@ -7,7 +7,7 @@ data class CoffeeDetails(
     val creamAmount: Int
 )
 fun main(){
-    var daisy = Dog("Daisy", "Dwarf poodle", 1)
+    /*var daisy = Dog("Daisy", "Dwarf poodle", 1)
 
     println("${daisy.name} is a ${daisy.breed} and is ${daisy.age} years old")
 
@@ -18,7 +18,42 @@ fun main(){
 
     val coffeeForDenis = CoffeeDetails(0, "denis", "xxl", 0)
 
-    makeCoffee(coffeeForDenis)
+    makeCoffee(coffeeForDenis)*/
+
+    val shoppingList = mutableListOf("Processor", "RAM",
+        "Graphics Card RTX3060", "SSD")
+
+    shoppingList.add("Cooling System")
+    shoppingList.remove("Graphics Card RTX3060")
+    shoppingList.add("Graphics Card RTX4090")
+
+    println(shoppingList)
+    shoppingList.removeAt(2)
+    println(shoppingList)
+    shoppingList.removeAt(1)
+    println(shoppingList)
+    shoppingList.add(2, "RAM")
+    println(shoppingList[3])
+
+    shoppingList[3] = "Graphics CARD RX 87==7800XT"
+    println(shoppingList)
+
+    shoppingList.set(1, "Water Cooling")
+    println(shoppingList)
+
+    val hasRam = shoppingList.contains("RAM")
+    if(hasRam) {
+        println("Has RAM in the list")
+    } else {
+        println("No RAM in the list")
+    }
+
+    for(item in shoppingList) {
+        println(item)
+        if(item == "RAM") {
+            break
+        }
+    }
 }
 
 fun add(num1: Int, num2: Int): Int {
